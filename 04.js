@@ -27,12 +27,16 @@ Exempel på värden och deras svar:
 
 */
 
-let numberArr = [2]
+let numberArr = [2, 10890, 22, 77]
 
 function get_average_sum(numberArr) {
 
-
-    // Lägg till kolla om heltal
+    for (let number of numberArr) {
+        if(Number.isInteger(number) === false) {
+            return false;
+        }
+    }
+    
     if (numberArr.length < 2 || numberArr.length > 10) {
         return false
     } else {
